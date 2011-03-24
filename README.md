@@ -4,9 +4,9 @@ This is a TextMate bundle that adds snippets for the Ceaser CSS Easing Equations
 
 ## Install
 
-The easiest way to download the bundle is with GetBundles
+I think this should eventually show up in GetBundles, but for now...
 
-Or you can download the bundle and install it:
+You can download the bundle and install it:
 
 1. download the zip and unzip it
 2. Double-click the Ceaser CSS Easing.tmbundle file
