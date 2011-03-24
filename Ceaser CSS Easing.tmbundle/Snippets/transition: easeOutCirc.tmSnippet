@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>-webkit-transition: all 500ms cubic-bezier(0.075, 0.820, 0.165, 1.000); 
+   -moz-transition: all 500ms cubic-bezier(0.075, 0.820, 0.165, 1.000); 
+     -o-transition: all 500ms cubic-bezier(0.075, 0.820, 0.165, 1.000); 
+        transition: all 500ms cubic-bezier(0.075, 0.820, 0.165, 1.000); /* easeOutCirc */</string>
+	<key>name</key>
+	<string>transition: easeOutCirc</string>
+	<key>scope</key>
+	<string>source.css</string>
+	<key>tabTrigger</key>
+	<string>trans-eocirc</string>
+	<key>uuid</key>
+	<string>3BF62301-AFD2-4439-B6B9-EB1051880EEB</string>
+</dict>
+</plist>
