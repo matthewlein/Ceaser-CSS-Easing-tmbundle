@@ -3,10 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>-webkit-transition: all 500ms cubic-bezier(0.950, 0.050, 0.795, 0.035); 
-   -moz-transition: all 500ms cubic-bezier(0.950, 0.050, 0.795, 0.035); 
-     -o-transition: all 500ms cubic-bezier(0.950, 0.050, 0.795, 0.035); 
-        transition: all 500ms cubic-bezier(0.950, 0.050, 0.795, 0.035); /* easeInExpo */</string>
+	<string>-webkit-transition: ${1:all} ${2:500}${3:ms} cubic-bezier(0.950, 0.050, 0.795, 0.035); 
+   -moz-transition: $1 $2$3 cubic-bezier(0.950, 0.050, 0.795, 0.035); 
+     -o-transition: $1 $2$3 cubic-bezier(0.950, 0.050, 0.795, 0.035); 
+        transition: $1 $2$3 cubic-bezier(0.950, 0.050, 0.795, 0.035); /* easeInExpo */</string>
 	<key>name</key>
 	<string>transition: easeInExpo</string>
 	<key>scope</key>
