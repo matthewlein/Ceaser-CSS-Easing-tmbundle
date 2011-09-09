@@ -4,7 +4,8 @@
 <dict>
 	<key>content</key>
 	<string>-webkit-transition: ${1:all} ${2:500}${3:ms} cubic-bezier(0.860, 0.000, 0.070, 1.000); 
-   -moz-transition: $1 $2$3 cubic-bezier(0.860, 0.000, 0.070, 1.000); 
+   -moz-transition: $1 $2$3 cubic-bezier(0.860, 0.000, 0.070, 1.000);
+    -ms-transition: $1 $2$3 cubic-bezier(0.860, 0.000, 0.070, 1.000);
      -o-transition: $1 $2$3 cubic-bezier(0.860, 0.000, 0.070, 1.000); 
         transition: $1 $2$3 cubic-bezier(0.860, 0.000, 0.070, 1.000); /* easeInOutQuint */</string>
 	<key>name</key>
