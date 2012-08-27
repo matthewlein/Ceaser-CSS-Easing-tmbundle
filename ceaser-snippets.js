@@ -1,8 +1,8 @@
 var prefixes = [
     '-webkit-',
-    '-moz-',
-    '-ms-',
-    '-o-'
+    '   -moz-',
+    '    -ms-',
+    '     -o-'
 ];
 
 var scope = 'source.css';
@@ -49,29 +49,29 @@ var ceaser = {
     'easeInOutBack'  : 'cubic-bezier(0.680, -0.550, 0.265, 1.550)'
 };
 
+var transitions = [
 
+    {
+        'name'     : 'transition: easeInCirc',
+        'easeName' : 'easeInCirc',
+        'bezier'   : ceaser.easeInCirc,
+        'UUID'     : '4E382915-159B-44F3-8D2B-576194BC5B55',
+        'trigger'  : 'trans-eicirc'
+    }
+
+]
 
 var eases = [
 
     {
-        'name'    : 'transition: easeInCirc',
-        'bezier'  : ceaser.easeInCirc,
-        'UUID'    : '4E382915-159B-44F3-8D2B-576194BC5B55',
-        'trigger' : 'trans-eicirc'
+        'name'     : 'easeInCirc',
+        'easeName' : 'easeInCirc',
+        'bezier'   : ceaser.easeInCirc,
+        'UUID'     : '4E382915-159B-44F3-8D2B-576194BC5B55',
+        'trigger'  : 'eicirc'
     }
 
 ];
-
-var transitions = [
-
-    {
-        'name'    : 'transition: easeInCirc',
-        'bezier'  : ceaser.easeInCirc,
-        'UUID'    : '4E382915-159B-44F3-8D2B-576194BC5B55',
-        'trigger' : 'trans-eicirc'
-    }
-
-]
 
 
 
@@ -81,5 +81,143 @@ var head = '<?xml version="1.0" encoding="UTF-8"?>\
 <dict>\
 	<key>content</key>\
 ';
+
+var foot = '</dict>\
+</plist>';
+
+
+
+var output = '';
+
+// transition snippets
+
+(function(){
+
+    transitions.forEach( function(snippet){
+
+        output += head;
+
+
+        //content
+
+        output += "<string>";
+
+        // prefixes
+        for (var i=0; i < prefixes.length; i++) {
+
+            transition = prefixes[i] + 'transition: ';
+            if ( i === 0 ) {
+                transition += '${1:all} ${2:500}${3:ms} ';
+            } else {
+                transition += '$1 $2$3 '
+            }
+            transition += snippet.bezier + ';\n'
+
+            output += transition;
+
+        }
+
+        // W3C version
+        output += '        transition: $1 $2$3 ' + snippet.bezier +     '; /* ' + snippet.easeName + ' */';
+
+        output += "</string>";
+
+        // name
+        output += '<key>name</key>\n'
+        output += '<string>' + snippet.name + '</string>'
+
+
+        // scope
+        output += '<key>scope</key>\n';
+        output += '<string>' + scope + '</string>\n'
+
+        // tab trigger
+
+        output += '<key>tabTrigger</key>'
+        output += '<string>' + snippet.trigger + '</string>'
+
+        //UUID
+
+        output += '<key>uuid</key>'
+        output += '<string>' + snippet.UUID + '</string>'
+
+        //footer
+        output += foot;
+
+        //final
+        console.log(output);
+
+    } )
+
+})()
+
+
+
+// ease snippets
+
+var transition = '';
+
+(function(){
+
+    output = '';
+
+    eases.forEach( function(snippet){
+
+        output += head;
+
+        // content
+        output += "<string>";
+        output += snippet.bezier;
+        output += "</string>\n";
+
+        //name
+        output += '<key>name</key>\n'
+        output += '<string>' + snippet.name + '</string>'
+
+        // scope
+        output += '<key>scope</key>\n';
+        output += '<string>' + scope + '</string>\n'
+
+        // tab trigger
+
+        output += '<key>tabTrigger</key>\n'
+        output += '<string>' + snippet.trigger + '</string>\n'
+
+        //UUID
+
+        output += '<key>uuid</key>\n'
+        output += '<string>' + snippet.UUID + '</string>\n'
+
+        //footer
+        output += foot;
+
+        //final
+        console.log(output);
+
+    } )
+
+})()
+
+
+// --------------------------------------------------------------------- //
+// Notes
+// --------------------------------------------------------------------- //
+
+// uuidgen in terminal for UUIDs
+
+// final output middle section
+//
+// <string>-webkit-transition: ${1:all} ${2:500}${3:ms} cubic-bezier(0.600, 0.040, 0.980, 0.335);
+//    -moz-transition: $1 $2$3 cubic-bezier(0.600, 0.040, 0.980, 0.335);
+//      -o-transition: $1 $2$3 cubic-bezier(0.600, 0.040, 0.980, 0.335);
+//         transition: $1 $2$3 cubic-bezier(0.600, 0.040, 0.980, 0.335); /* easeInCirc */</string>
+//  <key>name</key>
+//  <string>transition: easeInCirc</string>
+//  <key>scope</key>
+//  <string>source.css</string>
+//  <key>tabTrigger</key>
+//  <string>trans-eicirc</string>
+//  <key>uuid</key>
+//  <string>4E382915-159B-44F3-8D2B-576194BC5B55</string>
 
 
