@@ -58,6 +58,14 @@ var ceaser = {
 var transitions = [
 
     {
+        'name'     : 'transition',
+        'easeName' : '',
+        'bezier'   : '${4:ease}',
+        'trigger'  : 'trans',
+        'UUID'     : '525924E1-5C04-4803-950E-781BD1199D67'
+    },
+
+    {
         'name'     : 'transition: easeInCubic',
         'easeName' : 'easeInCubic',
         'bezier'   : ceaser.easeInCubic,
@@ -238,16 +246,6 @@ var transitions = [
         'bezier'   : ceaser.easeInOutBack,
         'trigger'  : 'trans-eioback',
         'UUID'     : 'A498D048-AF7E-4D44-8F91-800EE4B90A45'
-    },
-
-
-
-    {
-        'name'     : 'transition',
-        'easeName' : '',
-        'bezier'   : '${4:ease}',
-        'trigger'  : 'trans',
-        'UUID'     : '525924E1-5C04-4803-950E-781BD1199D67'
     }
 
 ];
