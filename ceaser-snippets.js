@@ -631,6 +631,4 @@ makeInfo();
 // --------------------------------------------------------------------- //
 
 // uuidgen in terminal for UUIDs
-// var fs = require('fs');
-// fs.writeFile("/tmp/test", "Hey there!", function(err) {})
 
