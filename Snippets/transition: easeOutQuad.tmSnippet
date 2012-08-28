@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>-webkit-transition: ${1:all} ${2:500}${3:ms} cubic-bezier(0.250, 0.460, 0.450, 0.940); 
+   -moz-transition: $1 $2$3 cubic-bezier(0.250, 0.460, 0.450, 0.940); 
+     -o-transition: $1 $2$3 cubic-bezier(0.250, 0.460, 0.450, 0.940); 
+        transition: $1 $2$3 cubic-bezier(0.250, 0.460, 0.450, 0.940); /* easeOutQuad */</string>
+	<key>name</key>
+	<string>transition: easeOutQuad</string>
+	<key>scope</key>
+	<string>source.css</string>
+	<key>tabTrigger</key>
+	<string>trans-eoquad</string>
+	<key>uuid</key>
+	<string>A94BF781-3346-41CB-8469-76EEC7BCCF93</string>
+</dict>
+</plist>
