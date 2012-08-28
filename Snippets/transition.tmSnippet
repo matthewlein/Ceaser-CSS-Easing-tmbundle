@@ -2,11 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>content</key>
+    <key>content</key>
 	<string>-webkit-transition: ${1:all} ${2:500}${3:ms} ${4:ease};
-   -moz-transition: $1 $2$3 $4;
-     -o-transition: $1 $2$3 $4;
-        transition: $1 $2$3 $4;</string>
+   -moz-transition: $1 $2$3 ${4:ease};
+    -ms-transition: $1 $2$3 ${4:ease};
+     -o-transition: $1 $2$3 ${4:ease};
+        transition: $1 $2$3 ${4:ease}; /*  */</string>
 	<key>name</key>
 	<string>transition</string>
 	<key>scope</key>

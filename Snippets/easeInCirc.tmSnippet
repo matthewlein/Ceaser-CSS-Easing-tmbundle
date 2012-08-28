@@ -2,7 +2,7 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>content</key>
+    <key>content</key>
 	<string>cubic-bezier(0.600, 0.040, 0.980, 0.335)</string>
 	<key>name</key>
 	<string>easeInCirc</string>

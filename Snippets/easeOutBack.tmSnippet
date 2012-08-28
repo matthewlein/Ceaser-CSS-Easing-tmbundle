@@ -3,14 +3,14 @@
 <plist version="1.0">
 <dict>
     <key>content</key>
-	<string>cubic-bezier(0.755, 0.050, 0.855, 0.060)</string>
+	<string>cubic-bezier(0.175,  0.885, 0.320, 1.275)</string>
 	<key>name</key>
-	<string>easeInQuint</string>
+	<string>easeOutBack</string>
 	<key>scope</key>
 	<string>source.css</string>
 	<key>tabTrigger</key>
-	<string>eiquint</string>
+	<string>eoback</string>
 	<key>uuid</key>
-	<string>6460240E-0CBC-42F8-BCA4-538305FA7D99</string>
+	<string>E7AD4BB1-B5D9-4962-952D-D922D752209B</string>
 </dict>
 </plist>
